@@ -1,0 +1,58 @@
+# ==============================================================================
+# LISTA DE PROJETOS DO PORTFÓLIO
+# ==============================================================================
+# Para adicionar um novo projeto, basta copiar um bloco abaixo e preencher
+# os campos. A página criará o card e os botões automaticamente!
+# ==============================================================================
+
+- title: "Chronicles of Aethelgard"
+  description: "RPG de ação tático desenvolvido em Unity/C# com sistema de combate dinâmico, geração procedural de masmorras e shaders customizados."
+  image: "assets/images/projects/project-1.svg"
+  featured: true
+  tags:
+    - "Unity"
+    - "C#"
+    - "Shaders/HLSL"
+    - "Game Design"
+  demo_url: "https://itch.io"
+  github_url: "https://github.com/rafaellannes"
+  details_url: ""
+
+- title: "DevFlow SaaS Platform"
+  description: "Plataforma completa de gerenciamento de sprints e métricas de engenharia com sincronização em tempo real via WebSockets e dashboard analítico."
+  image: "assets/images/projects/project-2.svg"
+  featured: true
+  tags:
+    - "TypeScript"
+    - "React"
+    - "Node.js"
+    - "PostgreSQL"
+  demo_url: "https://github.com/rafaellannes"
+  github_url: "https://github.com/rafaellannes"
+  details_url: ""
+
+- title: "Retro Pixel Engine"
+  description: "Motor de jogos 2D leve escrito em C++ e WebAssembly com renderizador customizado, suporte a partículas e reprodução de áudio chiptune."
+  image: "assets/images/projects/project-3.svg"
+  featured: false
+  tags:
+    - "C++"
+    - "WebAssembly"
+    - "OpenGL / WebGL"
+    - "Audio DSP"
+  demo_url: ""
+  github_url: "https://github.com/rafaellannes"
+  details_url: ""
+
+- title: "Neural Terrain Generator"
+  description: "Ferramenta procedural para geração de mapas e biomas 3D baseada em ruído quádruplo e redes neurais leves para exportação em formatos de engine."
+  image: "assets/images/projects/project-1.svg"
+  featured: false
+  tags:
+    - "Python"
+    - "Compute Shaders"
+    - "GLTF"
+    - "Tools Dev"
+  demo_url: ""
+  github_url: "https://github.com/rafaellannes"
+  details_url: ""

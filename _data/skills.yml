@@ -1,0 +1,47 @@
+# ==============================================================================
+# HABILIDADES & TECNOLOGIAS
+# ==============================================================================
+# Agrupadas por categorias para fácil manutenção.
+# ==============================================================================
+
+- category: "Front-end & Web"
+  icon: "layout"
+  items:
+    - name: "HTML5 / Semântica"
+      level: "Avançado"
+    - name: "CSS3 / Sass / Tailwind"
+      level: "Avançado"
+    - name: "JavaScript / TypeScript"
+      level: "Avançado"
+    - name: "React / Next.js"
+      level: "Intermediário"
+    - name: "Jekyll / Static Sites"
+      level: "Avançado"
+
+- category: "Game Dev & Gráficos"
+  icon: "gamepad"
+  items:
+    - name: "Unity Engine (2D/3D)"
+      level: "Avançado"
+    - name: "C# / .NET"
+      level: "Avançado"
+    - name: "Godot Engine"
+      level: "Intermediário"
+    - name: "Shaders / HLSL / GLSL"
+      level: "Intermediário"
+    - name: "Game Design & Áudio"
+      level: "Intermediário"
+
+- category: "Back-end & Ferramentas"
+  icon: "server"
+  items:
+    - name: "Node.js / Express"
+      level: "Intermediário"
+    - name: "Git / GitHub / CI/CD"
+      level: "Avançado"
+    - name: "REST APIs & WebSockets"
+      level: "Avançado"
+    - name: "Bancos SQL & NoSQL"
+      level: "Intermediário"
+    - name: "Figma / UI Design"
+      level: "Intermediário"

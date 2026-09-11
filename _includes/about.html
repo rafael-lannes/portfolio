@@ -1,0 +1,62 @@
+<section class="section about-section" id="about">
+  <div class="container">
+    
+    <div class="section-header">
+      <h2 class="section-title">Sobre Mim</h2>
+      <p class="section-subtitle">Conheça minha trajetória, visão técnica e principais competências</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Coluna de Texto / História -->
+      <div class="about-card about-bio-card">
+        <h3 class="about-card-title">Quem sou eu</h3>
+        <div class="about-text-content">
+          <p>{{ site.author.bio_full | newline_to_br }}</p>
+        </div>
+        
+        <div class="about-meta-list">
+          <div class="meta-item">
+            <span class="meta-icon">{% include icons.html name="map-pin" class="icon" %}</span>
+            <span class="meta-label">Localização:</span>
+            <span class="meta-value">{{ site.author.location }}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">{% include icons.html name="code" class="icon" %}</span>
+            <span class="meta-label">Foco:</span>
+            <span class="meta-value">{{ site.author.role }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna de Habilidades / Stacks Dinâmicas -->
+      <div class="about-skills-wrapper">
+        <h3 class="about-card-title">Tecnologias & Ferramentas</h3>
+        
+        <div class="skills-categories-grid">
+          {% for group in site.data.skills %}
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <span class="skill-cat-icon">
+                {% include icons.html name=group.icon class="icon" %}
+              </span>
+              <h4 class="skill-cat-title">{{ group.category }}</h4>
+            </div>
+
+            <ul class="skill-tags-list">
+              {% for item in group.items %}
+              <li class="skill-tag">
+                <span class="skill-tag-name">{{ item.name }}</span>
+                {% if item.level %}
+                <span class="skill-tag-badge">{{ item.level }}</span>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

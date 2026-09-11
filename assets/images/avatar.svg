@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGrad)" />
+  
+  <!-- Outer Ring Accent -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#avatarGrad)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6" />
+  
+  <!-- Stylized Monogram / Avatar Graphic -->
+  <g transform="translate(100, 92)">
+    <!-- Head -->
+    <circle cx="0" cy="-22" r="28" fill="url(#avatarGrad)" />
+    <!-- Glasses / Visor -->
+    <rect x="-20" y="-28" width="40" height="12" rx="6" fill="#ffffff" opacity="0.9" />
+    <!-- Shoulders / Body -->
+    <path d="M-52 48 C-52 14, 52 14, 52 48 Z" fill="url(#avatarGrad)" opacity="0.9" />
+  </g>
+  
+  <!-- Tech Accent Particles -->
+  <circle cx="45" cy="50" r="4" fill="#38bdf8" opacity="0.8" />
+  <circle cx="155" cy="65" r="3" fill="#a855f7" opacity="0.8" />
+  <circle cx="140" cy="140" r="4" fill="#34d399" opacity="0.8" />
+</svg>

@@ -1,0 +1,82 @@
+<header class="site-header" id="navbar">
+  <div class="container header-container">
+    <!-- Brand / Logo -->
+    <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Voltar ao início">
+      <span class="logo-symbol">&lt;/&gt;</span>
+      <span class="logo-text">{{ site.author.name }}</span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <ul class="nav-list">
+        {% for item in site.navigation %}
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}" 
+             class="nav-link" 
+             {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <!-- Header Actions (Theme Toggle & Mobile Menu Button) -->
+    <div class="header-actions">
+      {% if site.theme_settings.show_theme_toggle %}
+      <button id="theme-toggle" class="btn-icon theme-toggle-btn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+        <span class="theme-icon icon-sun">
+          {% include icons.html name="sun" class="icon" %}
+        </span>
+        <span class="theme-icon icon-moon">
+          {% include icons.html name="moon" class="icon" %}
+        </span>
+      </button>
+      {% endif %}
+
+      <button id="mobile-menu-toggle" class="btn-icon mobile-toggle-btn" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="menu-icon-open">
+          {% include icons.html name="menu" class="icon" %}
+        </span>
+        <span class="menu-icon-close">
+          {% include icons.html name="x" class="icon" %}
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer / Dropdown -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação mobile" hidden>
+    <div class="container mobile-nav-container">
+      <ul class="mobile-nav-list">
+        {% for item in site.navigation %}
+        <li class="mobile-nav-item">
+          <a href="{{ item.url | relative_url }}" 
+             class="mobile-nav-link" 
+             {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="mobile-social-links">
+        {% if site.social.github %}
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+          {% include icons.html name="github" class="icon" %}
+        </a>
+        {% endif %}
+        {% if site.social.linkedin %}
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+          {% include icons.html name="linkedin" class="icon" %}
+        </a>
+        {% endif %}
+        {% if site.social.email %}
+        <a href="{{ site.social.email }}" class="social-btn" aria-label="E-mail">
+          {% include icons.html name="email" class="icon" %}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>

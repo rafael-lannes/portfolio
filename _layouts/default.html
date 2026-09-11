@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="{{ site.theme_settings.default_theme | default: 'dark' }}">
+  
+  {% include head.html %}
+
+  <body class="site-body">
+    <!-- Link para Pular para o Conteúdo Principal (Acessibilidade) -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
+
+    <!-- Barra de Navegação -->
+    {% include navbar.html %}
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content" class="main-content">
+      {{ content }}
+    </main>
+
+    <!-- Rodapé -->
+    {% include footer.html %}
+
+    <!-- JavaScript Principal -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  </body>
+
+</html>

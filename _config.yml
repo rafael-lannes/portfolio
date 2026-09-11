@@ -1,0 +1,80 @@
+# ==============================================================================
+# CONFIGURAÇÃO PRINCIPAL DO PORTFÓLIO - RAFAEL LANNES
+# ==============================================================================
+# Todas as informações do seu site são configuradas aqui de forma simples.
+# Não é necessário alterar arquivos HTML para atualizar seus dados pessoais!
+# ==============================================================================
+
+# Informações Básicas do Site
+title: "Rafael Lannes | Desenvolvedor & Portfólio"
+description: "Portfólio profissional de Rafael Lannes. Projetos em desenvolvimento web, engenharia de software e game dev."
+url: "" # Se tiver domínio personalizado (ex: https://rafaellannes.com), insira aqui. Caso contrário, deixe vazio.
+baseurl: "" # Se o site for 'usuario.github.io/meu-portfolio', coloque '/meu-portfolio'. Se for 'usuario.github.io', deixe vazio "".
+
+# Metadados do Autor (Exibidos no Hero, Sobre e SEO)
+author:
+  name: "Rafael Lannes"
+  role: "Desenvolvedor Full-Stack & Game Dev"
+  location: "Brasil"
+  email: "contato@rafaellannes.dev"
+  status:
+    available: true # Define se a badge de "Disponível para projetos" ficará verde e ativa
+    text: "Disponível para novos projetos e oportunidades"
+  
+  # Foto de perfil / Avatar (Coloque sua imagem em assets/images/ e altere o nome aqui)
+  avatar: "assets/images/avatar.svg"
+  
+  # Resumo curto (Exibido com destaque no Hero)
+  bio_short: "Criando experiências digitais memoráveis, aplicações web escaláveis e mecânicas imersivas. Focado em código limpo, performance e usabilidade."
+  
+  # Biografia completa (Exibida na seção 'Sobre')
+  bio_full: >
+    Olá! Sou desenvolvedor apaixonado por tecnologia, desenvolvimento de software e criação de jogos.
+    Com experiência em construir produtos modernos do design ao deploy, gosto de transformar problemas
+    complexos em soluções digitais elegantes, acessíveis e eficientes.
+
+# Links de Redes Sociais e Contato
+# (Deixe o link vazio "" ou comente com # para ocultar da página)
+social:
+  github: "https://github.com/rafaellannes"
+  linkedin: "https://linkedin.com/in/rafaellannes"
+  email: "mailto:contato@rafaellannes.dev"
+  twitter: "https://twitter.com/rafaellannes"
+  instagram: ""
+  youtube: ""
+  itchio: "" # Para Game Devs! (ex: https://rafaellannes.itch.io)
+
+# Links do Menu de Navegação
+navigation:
+  - title: "Início"
+    url: "#hero"
+  - title: "Sobre"
+    url: "#about"
+  - title: "Projetos"
+    url: "#projects"
+  - title: "Contato"
+    url: "#contact"
+  # Exemplo de link externo ou currículo:
+  # - title: "Currículo (PDF)"
+  #   url: "assets/curriculo.pdf"
+  #   external: true
+
+# Configurações do Tema e Recursos
+theme_settings:
+  default_theme: "dark" # "dark" ou "light" (o usuário pode alternar e a escolha é salva)
+  accent_color: "#6366f1" # Cor de destaque (Indigo moderno)
+  accent_gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)"
+  show_theme_toggle: true
+  projects_per_page: 6
+
+# Configurações do Motor Jekyll (GitHub Pages)
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

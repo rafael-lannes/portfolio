@@ -1,150 +1,122 @@
 # 🚀 Portfólio Pessoal & Profissional - Rafael Lannes
 
-Um modelo de portfólio moderno, ultra veloz, responsivo e desacoplado, projetado especificamente para ser **hospedado gratuitamente no GitHub Pages** sem necessidade de configurações complicadas ou pipelines de CI/CD.
+Um modelo de portfólio moderno, veloz, responsivo e desacoplado, projetado para **hospedagem gratuita no GitHub Pages** ou em qualquer servidor estático.
 
-Inspirado na simplicidade do *Beautiful Jekyll*, este projeto foi construído para que você **nunca precise editar arquivos HTML complexos** ao atualizar textos, redes sociais ou adicionar novos projetos ao seu portfólio.
-
----
-
-## ✨ Principais Recursos
-
-- 🛠 **Manutenção Centralizada**: Edite apenas arquivos YAML (`_config.yml` e `_data/`).
-- 🌓 **Dark / Light Mode Nativo**: Alternância de tema suave com memorização da preferência do visitante (`localStorage`) e detecção automática do tema do sistema.
-- 📱 **Mobile-First & Acessível**: Menu hamburguer deslizante, semântica HTML5 estrita e suporte para navegação por teclado e leitores de tela.
-- ⚡ **Alta Performance (Zero Bloatware)**: Carregamento instantâneo com CSS moderno (<10KB) e ícones vetoriais SVG leves, sem frameworks pesados.
-- 🎮 **Grid de Projetos Dinâmico**: Cards modernos com thumbnails, tags de tecnologia, badges de destaque e botões para demonstração ao vivo e repositório.
-- 🌐 **100% Compatível com GitHub Pages**: Usa o motor nativo Jekyll do GitHub Pages.
+O projeto foi construído para que você **nunca precise mexer em arquivos HTML complexos**: todas as informações (nome, cargo, bio, redes sociais, habilidades e projetos) ficam centralizadas em um único arquivo de configuração: **`assets/js/config.js`**.
 
 ---
 
-## 📂 Estrutura de Diretórios do Repositório
+## ✨ Destaques do Projeto
+
+- 🛠 **Manutenção 100% Centralizada**: Abra `assets/js/config.js` e altere os dados. A página inteira se atualiza automaticamente!
+- 🌓 **Dark / Light Mode Inteligente**: Alternância instantânea com clique, memorização no navegador (`localStorage`) e detecção do tema do sistema operacional sem piscada branca (anti-FOUC).
+- 📱 **Mobile-First & Responsivo**: Menu hamburguer deslizante, visual fluido em celulares, tablets e monitores ultrawide.
+- ⚡ **Zero Dependências & Zero Instalações**: Funciona tanto com duplo-clique no arquivo `index.html` no seu computador quanto publicado no GitHub Pages (sem necessidade de instalar Ruby ou Node.js).
+- 🎮 **Grid de Projetos com Destaque**: Cards modernos com thumbnails 16:9, badges de tecnologia, suporte a projetos em destaque e links diretos para Demo e GitHub.
+
+---
+
+## 📂 Estrutura de Arquivos
 
 ```text
 Pagina Rafael Lannes/
 │
-├── _config.yml               # ⚙️ CONFIGURAÇÃO PRINCIPAL: Seu nome, bio, redes sociais, avatar e tema
-│
-├── _data/
-│   ├── projects.yml          # 💼 SEUS PROJETOS: Adicione ou edite projetos aqui
-│   └── skills.yml            # 🧠 SUAS HABILIDADES: Agrupadas por categorias
-│
-├── _includes/                # 🧩 Componentes modulares reutilizáveis (HTML/SVG)
-│   ├── head.html             # Metatags, SEO, OpenGraph e script de tema
-│   ├── navbar.html           # Barra de navegação com tema toggle e menu mobile
-│   ├── hero.html             # Apresentação inicial (Avatar, Nome, Cargo, Bio e CTAs)
-│   ├── about.html            # Seção Sobre e Habilidades dinâmicas
-│   ├── projects.html         # Grid moderno de cards de projetos
-│   ├── contact.html          # Card de contato rápido
-│   ├── footer.html           # Rodapé com ícones sociais e ano dinâmico
-│   └── icons.html            # Biblioteca de ícones SVG leves
-│
-├── _layouts/
-│   └── default.html          # Template base do site
+├── index.html                # 📄 Página principal completa e estruturada
 │
 ├── assets/
-│   ├── css/
-│   │   └── style.css         # Design system, temas Dark/Light e responsividade
 │   ├── js/
-│   │   └── main.js           # Controle de Dark Mode, menu mobile e scroll spy
+│   │   ├── config.js         # ⚙️ ARQUIVO DE CONFIGURAÇÃO: Edite seus dados, projetos e redes aqui!
+│   │   └── main.js           # 🧠 Lógica do site (tema, menu mobile, renderização dinâmica)
+│   │
+│   ├── css/
+│   │   └── style.css         # 🎨 Design system moderno, variáveis CSS e responsividade
+│   │
 │   └── images/
-│       ├── avatar.svg        # Sua foto de perfil (ou coloque seu avatar.png/.jpg)
-│       └── projects/         # Imagens e thumbnails dos seus projetos
+│       ├── avatar.svg        # Foto de perfil (ou coloque seu avatar.jpg/.png)
+│       └── projects/         # Imagens dos projetos (project-1, project-2, project-3)
 │
-├── index.html                # Ponto de entrada do site
 ├── .gitignore                # Arquivos ignorados pelo Git
 └── README.md                 # Guia de uso e deploy
 ```
 
 ---
 
-## 🛠️ Como Personalizar Seu Portfólio (Sem tocar em HTML!)
+## 🛠️ Como Personalizar (Sem tocar em HTML!)
 
-### 1. Alterar seus Dados Pessoais e Redes Sociais
-Abra o arquivo `_config.yml` e altere os campos:
-```yaml
-author:
-  name: "Seu Nome Completo"
-  role: "Seu Cargo / Especialidade"
-  location: "Sua Cidade, Brasil"
-  email: "seuemail@dominio.com"
-  bio_short: "Frase de impacto curta para o Hero."
-  bio_full: >
-    Seu texto de apresentação mais detalhado para a seção Sobre.
+Abra o arquivo **`assets/js/config.js`** no seu editor de código e altere os valores:
 
-social:
-  github: "https://github.com/seu-usuario"
-  linkedin: "https://linkedin.com/in/seu-usuario"
-  itchio: "https://seu-usuario.itch.io" # Opcional (deixe "" para ocultar)
+### 1. Dados Pessoais & Apresentação
+```javascript
+profile: {
+  name: "Rafael Lannes",
+  role: "Desenvolvedor Full-Stack & Game Dev",
+  location: "Brasil",
+  email: "contato@rafaellannes.dev",
+  status: {
+    available: true, // true para exibir a badge verde de disponível
+    text: "Disponível para novos projetos e oportunidades"
+  },
+  avatar: "assets/images/avatar.svg", // Caminho da sua foto
+  bioShort: "Frase de impacto curta para o Hero.",
+  bioFull: `Texto completo para a seção Sobre.`
+}
 ```
 
-### 2. Adicionar ou Editar Projetos
-Abra o arquivo `_data/projects.yml` e adicione um novo bloco no formato:
-```yaml
-- title: "Nome do Meu Projeto"
-  description: "Breve resumo sobre o que o projeto faz e seu impacto."
-  image: "assets/images/projects/meu-projeto.png"
-  featured: true # true para exibir a badge de "Destaque"
-  tags:
-    - "React"
-    - "TypeScript"
-    - "Tailwind"
-  demo_url: "https://meu-projeto.vercel.app" # Link para ver online (ou "" se não houver)
-  github_url: "https://github.com/usuario/projeto" # Link do código no GitHub (ou "" se for privado)
-  details_url: "" # Opcional
+### 2. Redes Sociais
+```javascript
+social: {
+  github: "https://github.com/seu-usuario",
+  linkedin: "https://linkedin.com/in/seu-usuario",
+  email: "mailto:seuemail@dominio.com",
+  itchio: "https://seu-usuario.itch.io", // Opcional (deixe "" para ocultar)
+  twitter: "https://twitter.com/seu-usuario"
+}
 ```
 
-### 3. Atualizar Habilidades & Tecnologias
-Abra o arquivo `_data/skills.yml` para adicionar ou remover tecnologias e seus níveis de proficiência.
+### 3. Adicionar ou Editar Projetos
+Para adicionar um novo projeto ao portfólio, basta adicionar um novo objeto na lista `projects`:
+```javascript
+{
+  title: "Nome do Meu Projeto",
+  description: "Descrição rápida sobre o que o projeto faz e tecnologias usadas.",
+  image: "assets/images/projects/project-1.svg", // ou .png/.jpg
+  featured: true, // true para exibir a badge de "Destaque"
+  tags: ["React", "TypeScript", "TailwindCSS"],
+  demoUrl: "https://meu-projeto.vercel.app", // link do demo (ou "" se não tiver)
+  githubUrl: "https://github.com/usuario/projeto" // link do código (ou "" se for privado)
+}
+```
 
-### 4. Mudar sua Foto de Perfil
-1. Coloque sua imagem (ex: `avatar.jpg` ou `avatar.png`) na pasta `assets/images/`.
-2. No `_config.yml`, atualize a linha:
-   ```yaml
-   avatar: "assets/images/avatar.jpg"
-   ```
+### 4. Atualizar Habilidades
+No array `skills` de `assets/js/config.js`, você pode adicionar categorias e tecnologias com seus respectivos níveis ("Avançado", "Intermediário", etc.).
 
 ---
 
-## 🚢 Como Publicar no GitHub Pages (Passo a Passo)
+## 🚀 Como Publicar no GitHub Pages (3 Passos)
 
-### Passo 1: Criar o Repositório no GitHub
-1. Acesse o [GitHub](https://github.com/) e clique em **New repository**.
-2. **Nome do repositório**:
-   - Para o site ficar no endereço principal `https://seuusuariono.github.io`: Nomeie o repositório exatamente como `seuusuariono.github.io`.
-   - Para o site ficar em um subendereço `https://seuusuariono.github.io/portfolio`: Nomeie como `portfolio` e no `_config.yml` defina `baseurl: "/portfolio"`.
-3. Deixe o repositório como **Public** e clique em **Create repository**.
-
-### Passo 2: Enviar o Código para o GitHub
-No terminal da sua pasta local, execute:
+### Passo 1: Subir os arquivos para o GitHub
+No terminal da pasta do projeto, execute:
 ```bash
 git init
 git add .
-git commit -m "feat: meu portfólio pessoal e profissional"
+git commit -m "feat: meu portfolio estático"
 git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
 git push -u origin main
 ```
 
-### Passo 3: Ativar o GitHub Pages nas Configurações
-1. No seu repositório no GitHub, clique na aba **Settings** (Configurações).
-2. Na barra lateral esquerda, clique em **Pages** (dentro da seção *Code and automation*).
-3. Na opção **Build and deployment**:
-   - **Source**: selecione **Deploy from a branch**.
-   - **Branch**: selecione `main` e a pasta `/(root)`.
-4. Clique em **Save**.
+### Passo 2: Ativar o GitHub Pages
+1. Acesse o seu repositório no GitHub e clique em **Settings**.
+2. No menu lateral esquerdo, clique em **Pages**.
+3. Em **Build and deployment > Source**, escolha **Deploy from a branch**.
+4. Em **Branch**, selecione `main` e a pasta `/(root)`.
+5. Clique em **Save**.
 
-🎉 **Pronto!** Em cerca de 1 minuto, o GitHub processará os arquivos com o Jekyll e exibirá o link verde com a sua página no ar!
+### Passo 3: Pronto!
+Em menos de 1 minuto, o GitHub Pages fornecerá a URL pública do seu portfólio no topo da página de configurações!
 
 ---
 
-## 💻 Teste Local (Opcional)
+## 💻 Visualização Local
 
-Se quiser visualizar as alterações na sua máquina:
-
-- **Opção 1 (Simples - Sem Ruby)**: Use a extensão **Live Server** do VS Code ou execute `python -m http.server 8000` (Obs: para renderizar as tags Liquid dinamicamente em tempo real, use a Opção 2).
-- **Opção 2 (Nativo Jekyll)**:
-  ```bash
-  gem install jekyll bundler
-  bundle exec jekyll serve
-  ```
-  Acesse `http://localhost:4000` no seu navegador.
+Basta dar um **duplo clique no arquivo `index.html`** para abrir diretamente no seu navegador (Chrome, Edge, Firefox, Safari) ou utilizar a extensão **Live Server** no VS Code.

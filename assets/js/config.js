@@ -10,8 +10,8 @@ const SITE_CONFIG = {
   // 1. Dados Pessoais & Apresentação
   profile: {
     name: "Rafael Lannes",
-    role: "Analista de Soluções Digitais & Engenheiro de Software",
-    institution: "Bacharel em Sistemas de Informação — Universidade Federal Fluminense (UFF)",
+    role: "Bacharel em Sistemas de Informação — Universidade Federal Fluminense (UFF)",
+    institution: "",
     subheading: "Soluções digitais, engenharia de software e análise de dados",
     location: "Niterói, RJ - Brasil",
     cvUrl: "https://docs.google.com/document/d/1FzDuEu7fBet1tpHOFAoU4kjU7POQWh7B/edit?usp=sharing&ouid=111306556304286270366&rtpof=true&sd=true",
@@ -169,7 +169,7 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
     {
       title: "Protótipos & Jogos Digitais (Itch.io)",
       description: "Jogos e protótipos interativos desenvolvidos em Unity e C#, publicados de forma independente no Itch.io com foco em mecânicas responsivas e design de jogabilidade.",
-      image: "assets/images/projects/project-game.svg",
+      image: "assets/images/projects/cleber-vs-zombies.png",
       featured: false,
       tags: ["Game Dev", "Itch.io", "Unity", "C#", "Game Design"],
       demoUrl: "https://rafaellannes.itch.io/",
@@ -182,7 +182,8 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
       featured: false,
       status: "descontinuado",
       tags: ["Descontinuado", "Impressão 3D", "L3D UFF", "Manufatura Aditiva", "Hardware"],
-      demoUrl: "",
+      demoUrl: "projeto-l3d.html",
+      demoLabel: "Ver Projeto L3D",
       githubUrl: ""
     },
     {

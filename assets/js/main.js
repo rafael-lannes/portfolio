@@ -69,9 +69,15 @@ function renderSiteContent(config) {
       if (heroRoleElem) heroRoleElem.textContent = profile.role;
     }
 
-    if (profile.institution) {
-      const heroInstElem = document.getElementById('hero-institution');
-      if (heroInstElem) heroInstElem.textContent = profile.institution;
+    const heroInstElem = document.getElementById('hero-institution');
+    if (heroInstElem) {
+      if (profile.institution && profile.institution.trim() !== '') {
+        heroInstElem.textContent = profile.institution;
+        heroInstElem.style.display = '';
+      } else {
+        heroInstElem.textContent = '';
+        heroInstElem.style.display = 'none';
+      }
     }
 
     if (profile.location) {
@@ -299,10 +305,11 @@ function renderProjects(projects) {
 
     const tagsHtml = proj.tags ? proj.tags.map(t => `<span class="tag-pill">${t}</span>`).join('') : '';
 
+    const isInternal = proj.demoUrl && !proj.demoUrl.startsWith('http');
     const demoBtn = proj.demoUrl && proj.demoUrl.trim() !== ''
-      ? `<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-          <span>Acessar Projeto</span>
-          ${SVG_ICONS.external}
+      ? `<a href="${proj.demoUrl}" ${isInternal ? '' : 'target="_blank" rel="noopener noreferrer"'} class="btn btn-sm btn-primary">
+          <span>${proj.demoLabel || 'Acessar Projeto'}</span>
+          ${isInternal ? (SVG_ICONS.fileText || SVG_ICONS.external) : SVG_ICONS.external}
         </a>`
       : '';
 

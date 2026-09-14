@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título e Metatags de SEO -->
+  <title>Projeto L3D UFF — Laboratório de Impressão 3D | Rafael Lannes</title>
+  <meta name="description" content="Histórico de projetos, manufatura aditiva, manutenção de hardware e desenvolvimento web no Laboratório de Impressão 3D da UFF (2019-2021).">
+  <meta name="author" content="Rafael Lannes">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Projeto L3D UFF — Laboratório de Impressão 3D | Rafael Lannes">
+  <meta property="og:description" content="Resumo de projetos, métricas e atuação técnica no Laboratório de Impressão 3D do Instituto de Física da UFF.">
+  <meta property="og:image" content="assets/images/l3d/espaco-l3d-if.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/profile-pic.png">
+
+  <!-- Fontes: Manrope & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Anti-FOUC de Tema -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        var theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+
+<body class="site-body">
+  <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
+
+  <!-- ========================================================================= -->
+  <!-- 1. BARRA DE NAVEGAÇÃO SUPERIOR -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Voltar ao início">
+        <span class="logo-symbol">RL</span>
+        <span class="logo-text">Rafael Lannes</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html#hero" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link">Sobre &amp; Carreira</a></li>
+          <li class="nav-item"><a href="index.html#projects" class="nav-link active">Portfolio</a></li>
+          <li class="nav-item"><a href="https://docs.google.com/document/d/1FzDuEu7fBet1tpHOFAoU4kjU7POQWh7B/edit?usp=sharing&ouid=111306556304286270366&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="nav-link">Resume | CV <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></li>
+          <li class="nav-item"><a href="index.html#contact" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Header (Tema e Voltar) -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon theme-toggle-btn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path><path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path><path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <a href="index.html#projects" class="btn btn-sm btn-outline-nav">
+          <span>&larr; Voltar</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- CONTEÚDO PRINCIPAL: PROJETO L3D UFF -->
+  <!-- ========================================================================= -->
+  <main id="main-content" class="page-detail">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Início</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="index.html#projects">Portfolio</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Projeto L3D UFF</span>
+      </nav>
+
+      <!-- Cabeçalho Editorial do Projeto -->
+      <div class="project-detail-header">
+        <div class="project-badge-row">
+          <span class="project-badge-discontinued">Descontinuado</span>
+          <span class="tag-pill">Laboratório Universitário • 2019 — 2021</span>
+          <span class="tag-pill">Instituto de Física • UFF</span>
+        </div>
+
+        <h1 class="project-detail-title">L3D - MakerSpace UFF</h1>
+        <p class="project-detail-subtitle">
+          Um resumo da minha trajetória no meu estágio como Técnico de TI e Impressão 3D no Makerspace L3D UFF
+        </p>
+      </div>
+
+      <!-- Ficha Técnica / Spec Strip -->
+      <div class="project-spec-strip">
+        <div class="spec-item">
+          <span class="spec-label">Papel / Função</span>
+          <span class="spec-value">Técnico de TI e Impressão 3D</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Período de Atuação</span>
+          <span class="spec-value">2019 — 2021</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Hardware &amp; Embarcados</span>
+          <span class="spec-value">Creality ENDER-3, CR-10S, Raspberry Pi 3 (OctoPrint)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Software &amp; Web</span>
+          <span class="spec-value">Ultimaker Cura, Tinkercad, WordPress (Tema Orfeo)</span>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 2. MÉTRICAS E RESULTADOS ALCANÇADOS (PDF RESUMO) -->
+      <!-- ===================================================================== -->
+      <div class="section-header" style="margin-top: 3rem; margin-bottom: 1.5rem;">
+        <h2 class="section-title">Métricas e Produção do Laboratório</h2>
+        <p class="section-subtitle">Dados consolidados dos projetos realizados no período</p>
+      </div>
+
+      <div class="stats-summary-grid">
+        <div class="stat-summary-card">
+          <div class="stat-number">18</div>
+          <div class="stat-title">Projetos Realizados</div>
+          <div class="stat-detail">11 via portal web + 7 no curso de Automação e Robótica</div>
+        </div>
+
+        <div class="stat-summary-card">
+          <div class="stat-number">+60</div>
+          <div class="stat-title">Impressões Executadas</div>
+          <div class="stat-detail">Protótipos funcionais, peças finais e testes internos</div>
+        </div>
+
+        <div class="stat-summary-card">
+          <div class="stat-number">Mar/19</div>
+          <div class="stat-title">Inauguração do Espaço</div>
+          <div class="stat-detail">Montagem da infraestrutura física, bancadas e servidores</div>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 3. CARD DE DESTAQUE: SITE E ESPAÇO MAKERSPACE UFF - L3D -->
+      <!-- ===================================================================== -->
+      <section class="website-showcase-card" id="site-l3d">
+        <div class="showcase-header">
+          <div class="showcase-title-area">
+            <h2 class="showcase-card-title">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--accent-text);"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              Site e Espaço MakerSpace UFF - L3D
+            </h2>
+          </div>
+          <div class="showcase-badges">
+            <span class="project-badge-discontinued">Descontinuado em 2026</span>
+            <span class="tag-pill">WordPress</span>
+            <span class="tag-pill">Tema Orfeo</span>
+            <span class="tag-pill">Hospedagem UFF</span>
+          </div>
+        </div>
+
+        <div class="showcase-description">
+          <p>
+            Um website do laboratório de impressão 3D e robótica do Instituto de Física da Universidade Federal Fluminense. Criado e configurado por <strong>Rafael Lannes</strong>.
+          </p>
+          <p>
+            Foi construído na plataforma <strong>WordPress</strong>, com configuração de plugins, temas (Orfeo) e postagens com conteúdo. O site se encontrava hospedado nos servidores do Instituto de Física - UFF.
+          </p>
+          <p>
+            Manutenção contínua do site e publicação de postagens de projetos de alunos e professores da UFF realizados no laboratório. O site foi descontinuado em 2026.
+          </p>
+        </div>
+
+        <!-- Galeria de Imagens do Espaço Físico e Website Oficial -->
+        <div class="showcase-images-grid">
+          
+          <!-- Foto do Espaço Físico 1 -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/espaco-l3d-if.jpg" alt="Espaço L3D Uff - Instituto de Física" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Espaço L3D Uff - Instituto de Física
+            </div>
+          </div>
+
+          <!-- Foto do Espaço Físico 2 -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/impressoras-3d-trabalhando.jpg" alt="Impressoras 3D Trabalhando" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Impressoras 3D Trabalhando
+            </div>
+          </div>
+
+          <!-- Imagem 1: Hero Banner -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/l3d-site-hero.png" alt="Página Inicial e Banner do MakerSpace L3D UFF" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Página Inicial — Banner do Laboratório MakerSpace L3D
+            </div>
+          </div>
+
+          <!-- Imagem 2: Nossa Missão & Parceiros -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/l3d-site-missao.png" alt="Seção Nossa Missão e Parceiros Institucionais" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Nossa Missão &amp; Parceiros (UFF, IF, CNPq, INCT)
+            </div>
+          </div>
+
+          <!-- Imagem 3: Gestores -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/l3d-site-gestores.png" alt="Equipe de Gestores do Laboratório" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Equipe de Gestores e Coordenadores do Laboratório
+            </div>
+          </div>
+
+          <!-- Imagem 4: Técnicos e Bolsistas -->
+          <div class="showcase-image-item">
+            <div class="showcase-img-wrap">
+              <img src="assets/images/l3d/l3d-site-equipe.png" alt="Técnicos e Bolsistas com Rafael Lannes" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              Técnicos e Bolsistas — Destaque para Rafael Lannes (Técnico)
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- 4. ATIVIDADES E RESPONSABILIDADES REALIZADAS -->
+      <!-- ===================================================================== -->
+      <div class="section-header" style="margin-top: 3.5rem; margin-bottom: 1.5rem;">
+        <h2 class="section-title">Atividades &amp; Responsabilidades Realizadas</h2>
+        <p class="section-subtitle">Principais atribuições técnicas, operacionais e de engenharia desenvolvidas no laboratório</p>
+      </div>
+
+      <div class="features-grid">
+        
+        <!-- Card 1: Gestão & Atendimento -->
+        <article class="activity-card">
+          <div class="activity-header">
+            <div class="activity-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="activity-card-title">Atendimento &amp; Gestão de Projetos</h3>
+          </div>
+          <ul class="activity-card-list">
+            <li>Atendimentos e participações em diversos projetos de laboratórios, docentes e alunos da comunidade acadêmica da UFF.</li>
+            <li>Aplicação prática de conhecimentos de gerência de projetos para estruturar o fluxo de trabalho (workflow) de solicitações e projetos submetidos através do website do laboratório.</li>
+          </ul>
+        </article>
+
+        <!-- Card 2: Hardware & Manutenção 3D -->
+        <article class="activity-card">
+          <div class="activity-header">
+            <div class="activity-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="activity-card-title">Hardware &amp; Manutenção de Impressoras</h3>
+          </div>
+          <ul class="activity-card-list">
+            <li>Configuração, instalação, nivelamento e manutenção preventiva e corretiva de impressoras 3D <strong>Creality ENDER-3</strong> e <strong>CR-10S</strong>.</li>
+            <li>Implementação e integração do <strong>OctoPrint</strong> embarcado em <strong>Raspberry Pi 3</strong> para controle remoto, monitoramento contínuo e gestão da fila de impressões.</li>
+          </ul>
+        </article>
+
+        <!-- Card 3: Modelagem & Software Slicer -->
+        <article class="activity-card">
+          <div class="activity-header">
+            <div class="activity-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3 class="activity-card-title">Fatiamento &amp; Modelagem 3D</h3>
+          </div>
+          <ul class="activity-card-list">
+            <li>Utilização avançada do software Slicer <strong>Ultimaker Cura</strong> para calibração de parâmetros de extrusão, suportes, preenchimento e otimização de tempo/qualidade.</li>
+            <li>Desenvolvimento e adaptação de modelos 3D técnicos utilizando <strong>Tinkercad</strong> e ajustes de geometrias para manufatura aditiva.</li>
+          </ul>
+        </article>
+
+        <!-- Card 4: Web & Documentação -->
+        <article class="activity-card">
+          <div class="activity-header">
+            <div class="activity-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="activity-card-title">Website &amp; Documentação Técnica</h3>
+          </div>
+          <ul class="activity-card-list">
+            <li>Construção e administração do website oficial do laboratório na plataforma WordPress, com gestão de plugins, customização do tema Orfeo e infraestrutura nos servidores do Instituto de Física - UFF.</li>
+            <li>Criação e publicação de postagens para o blog institucional e catálogo de projetos acadêmicos realizados.</li>
+            <li>Desenvolvimento de tutoriais, manuais de operação e documentação padronizada de procedimentos do laboratório.</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 5. DOCENTES, LABORATÓRIOS E ENTIDADES ATENDIDAS -->
+      <!-- ===================================================================== -->
+      <div class="section-header" style="margin-top: 3.5rem; margin-bottom: 1rem;">
+        <h2 class="section-title">Comunidade Acadêmica &amp; Entidades Atendidas</h2>
+        <p class="section-subtitle">Professores, pesquisadores e grupos da UFF que foram atendidos através do fluxo de solicitações do L3D via formulário em 2019</p>
+      </div>
+
+      <div class="directory-grid">
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Mário Reis (Coordenador Geral e Professor do IF - UFF)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Diego Machado (Coordenador Técnico)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Prof. Newton Mansur (Instituto de Física)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Prof. Paulo Acioly (Instituto de Física)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Laboratório de Óptica Quântica (LOQ - UFF)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Laboratório de Preparação de Materiais (IF - UFF)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>AsimUFF (Equipe de Robótica)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>LUFFT (Equipe de Foguetemodelismo da UFF)</span>
+        </div>
+        <div class="directory-item">
+          <span class="directory-dot"></span>
+          <span>Alunos de Desenho Industrial (UFF)</span>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 6. OFICINAS & EXTENSÃO UNIVERSITÁRIA -->
+      <!-- ===================================================================== -->
+      <div class="workshop-card">
+        <div class="workshop-header">
+          <div class="workshop-header-main">
+            <div class="workshop-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <div class="workshop-title-area">
+              <h3>Oficina de Impressão 3D — Coluni-UFF</h3>
+            </div>
+          </div>
+          <span class="workshop-date-badge">Julho de 2019</span>
+        </div>
+
+        <div class="workshop-content">
+          <p>
+            Realização de oficinas práticas de capacitação e demonstração técnica para estudantes do <strong>Colégio Universitário Geraldo Reis (Coluni-UFF)</strong> em <strong>Julho de 2019</strong>, estimulando o aprendizado prático e o interesse por fabricação digital, robótica e tecnologias de prototipagem 3D.
+          </p>
+        </div>
+
+        <!-- Galeria de Fotos da Oficina -->
+        <div class="workshop-images-grid">
+          
+          <div class="workshop-img-item">
+            <div class="workshop-img-wrap">
+              <img src="assets/images/l3d/oficina-coluni-1.jpg" alt="Oficina de Impressão 3D no Coluni-UFF" loading="lazy">
+            </div>
+          </div>
+
+          <div class="workshop-img-item">
+            <div class="workshop-img-wrap">
+              <img src="assets/images/l3d/oficina-coluni-2.jpg" alt="Oficina de Impressão 3D no Coluni-UFF" loading="lazy">
+            </div>
+          </div>
+
+          <div class="workshop-img-item">
+            <div class="workshop-img-wrap">
+              <img src="assets/images/l3d/oficina-coluni-3.jpg" alt="Oficina de Impressão 3D no Coluni-UFF" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Destaque Especial: COVID-19 -->
+      <div class="special-highlight-card">
+        <div class="highlight-icon-box">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="highlight-content">
+          <h4>Apoio Emergencial durante a Pandemia (COVID-19 — 2020)</h4>
+          <p>
+            Mobilização emergencial da infraestrutura de manufatura aditiva para a confecção e distribuição de <strong>Equipamentos de Proteção Individual (EPIs / Face Shields)</strong> impressos em 3D para a comunidade médica e acadêmica.
+          </p>
+        </div>
+      </div>
+
+      <!-- Botão de Retorno -->
+      <div style="margin-top: 4rem; display: flex; justify-content: center;">
+        <a href="index.html#projects" class="btn btn-primary btn-lg">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Voltar ao Portfólio Principal</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-social-links" aria-label="Redes sociais do rodapé">
+        <a href="https://linkedin.com/in/rafaellannes" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn" title="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/rafael-lannes" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub" title="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        </a>
+        <a href="https://rafaellannes.itch.io/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Itch.io" title="Itch.io">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="3"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><circle cx="15" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="copyright-year">2026</span> Rafael Lannes. Todos os direitos reservados.
+        </p>
+        <p class="footer-credits">
+          Otimizado para o <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

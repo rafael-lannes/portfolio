@@ -11,8 +11,8 @@ baseurl: ""
 # Metadados do Autor (Exibidos no Hero, Sobre e SEO)
 author:
   name: "Rafael Lannes"
-  role: "Analista de Soluções Digitais & Engenheiro de Software"
-  institution: "Bacharel em Sistemas de Informação — Universidade Federal Fluminense (UFF)"
+  role: "Bacharel em Sistemas de Informação — Universidade Federal Fluminense (UFF)"
+  institution: ""
   subheading: "Soluções digitais, engenharia de software e análise de dados"
   location: "Niterói, RJ - Brasil"
   email: ""

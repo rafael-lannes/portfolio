@@ -31,7 +31,7 @@
 
 - title: "AudioJoiner"
   description: "Utilitário desktop de alta performance para Windows (< 40MB RAM) desenvolvido em C# / .NET 8 e WPF. Unifica e clona a saída de áudio do sistema em tempo real para múltiplos dispositivos de som físicos simultaneamente sem drivers virtuais externos."
-  image: "assets/images/projects/project-audiojoiner.svg"
+  image: "assets/images/projects/audiojoiner.png"
   featured: false
   status: "desenvolvendo"
   tags:
@@ -45,7 +45,7 @@
 
 - title: "Protótipos & Jogos Digitais (Itch.io)"
   description: "Jogos e protótipos interativos desenvolvidos em Unity e C#, publicados de forma independente no Itch.io com foco em mecânicas responsivas e design de jogabilidade."
-  image: "assets/images/projects/project-game.svg"
+  image: "assets/images/projects/cleber-vs-zombies.png"
   featured: false
   tags:
     - "Game Dev"
@@ -67,7 +67,8 @@
     - "L3D UFF"
     - "Manufatura Aditiva"
     - "Hardware"
-  demo_url: ""
+  demo_url: "projeto-l3d.html"
+  demo_label: "Ver Projeto L3D"
   github_url: ""
 
 - title: "Trabalho de Conclusão de Curso (TCC UFF)"

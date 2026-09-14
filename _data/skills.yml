@@ -2,38 +2,36 @@
 # HABILIDADES & TECNOLOGIAS - RAFAEL LANNES
 # ==============================================================================
 
-- category: "Dados e BI"
+- category: "DevOps e Infraestrutura"
   icon: "server"
   items:
-    - name: "Power BI (modelagem de dados, Power Query, dashboards e DAX)"
-    - name: "Conceitos de ETL e modelagem analítica"
-    - name: "SQL e bancos de dados NoSQL"
+    - name: "AWS"
+    - name: "Jira"
+    - name: "Git & GitHub"
+    - name: "Grafana e Dynatrace (monitoramento)"
 
 - category: "Programação e Automação"
   icon: "code"
   items:
     - name: "Python"
     - name: "C, C#, Java"
-
-- category: "Integração e Ferramentas"
-  icon: "layout"
-  items:
+    - name: ".NET 8 / WPF"
     - name: "APIs e integração de sistemas"
-    - name: "Power Automate (conhecimento básico)"
-    - name: "Grafana e Dynatrace (monitoramento)"
-
-- category: "DevOps e Infraestrutura"
-  icon: "server"
-  items:
-    - name: "AWS"
-    - name: "Jira"
+    - name: "Power Automate"
 
 - category: "Game Dev & Hardware"
   icon: "gamepad"
   items:
-    - name: "Unity Engine (2D/3D)"
+    - name: "Unity Engine (C#)"
     - name: "Impressão 3D (Manufatura Aditiva)"
-    - name: "Montagem e Manutenção de Computadores"
+    - name: "Montagem e Manutenção de Hardware"
+
+- category: "Dados e BI"
+  icon: "server"
+  items:
+    - name: "Power BI (modelagem de dados, Power Query, dashboards e DAX)"
+    - name: "Conceitos de ETL e modelagem analítica"
+    - name: "SQL e bancos de dados NoSQL"
 
 - category: "Idiomas"
   icon: "layout"

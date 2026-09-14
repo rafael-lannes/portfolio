@@ -198,10 +198,8 @@ function renderSocialLinks(social) {
 
   const socialItems = [
     { key: 'linkedin', label: 'LinkedIn', url: social.linkedin, icon: SVG_ICONS.linkedin },
-    { key: 'itchio', label: 'Itch.io', url: social.itchio, icon: SVG_ICONS.itchio },
     { key: 'github', label: 'GitHub', url: social.github, icon: SVG_ICONS.github },
-    { key: 'reviews', label: 'Reviews (Modo Stealth)', url: social.reviews, icon: SVG_ICONS.layout },
-    { key: 'l3d', label: 'L3D UFF', url: social.l3d, icon: SVG_ICONS.external }
+    { key: 'itchio', label: 'Itch.io', url: social.itchio, icon: SVG_ICONS.itchio }
   ].filter(item => item.url && item.url.trim() !== '');
 
   if (heroContainer) {

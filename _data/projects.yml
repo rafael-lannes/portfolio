@@ -58,7 +58,7 @@
 
 - title: "Projetos de Impressões 3D (L3D UFF)"
   description: "Projetos, peças técnicas e modelos desenvolvidos no Laboratório de Impressão 3D do Instituto de Física da Universidade Federal Fluminense. Contribuições realizadas até 2021."
-  image: "assets/images/projects/project-3d.svg"
+  image: "assets/images/projects/l3d-prints.jpg"
   featured: false
   status: "descontinuado"
   tags:
@@ -67,7 +67,7 @@
     - "L3D UFF"
     - "Manufatura Aditiva"
     - "Hardware"
-  demo_url: "https://l3d.if.uff.br/?cat=4"
+  demo_url: ""
   github_url: ""
 
 - title: "Trabalho de Conclusão de Curso (TCC UFF)"
@@ -80,16 +80,4 @@
     - "Sistemas de Informação"
     - "RIUFF"
   demo_url: "https://app.homologacao.uff.br/riuff/handle/1/22495"
-  github_url: ""
-
-- title: "Modo Stealth (Reviews & Tecnologia)"
-  description: "Portal e blog com análises aprofundadas, ensaios e artigos sobre o ecossistema de games, hardware e tecnologia."
-  image: "assets/images/projects/project-stealth.svg"
-  featured: false
-  tags:
-    - "Blog"
-    - "Reviews"
-    - "Tecnologia"
-    - "WordPress"
-  demo_url: "https://modostealth.wordpress.com/"
   github_url: ""

@@ -70,9 +70,7 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
   social: {
     linkedin: "https://linkedin.com/in/rafaellannes",
     github: "https://github.com/rafael-lannes",
-    itchio: "https://rafaellannes.itch.io/",
-    reviews: "https://modostealth.wordpress.com/",
-    l3d: "https://l3d.if.uff.br/"
+    itchio: "https://rafaellannes.itch.io/"
   },
 
   // 4. Menu de Navegação
@@ -87,12 +85,13 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
   // 5. Tecnologias & Competências
   skills: [
     {
-      category: "Dados e BI",
+      category: "DevOps e Infraestrutura",
       icon: "server",
       items: [
-        "Power BI (modelagem de dados, Power Query, dashboards e DAX)",
-        "Conceitos de ETL e modelagem analítica",
-        "SQL e bancos de dados NoSQL"
+        "AWS",
+        "Jira",
+        "Git & GitHub",
+        "Grafana e Dynatrace (monitoramento)"
       ]
     },
     {
@@ -101,25 +100,9 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
       items: [
         "Python",
         "C, C#, Java",
-        ".NET 8 / WPF"
-      ]
-    },
-    {
-      category: "Integração e Ferramentas",
-      icon: "layout",
-      items: [
+        ".NET 8 / WPF",
         "APIs e integração de sistemas",
-        "Power Automate",
-        "Grafana e Dynatrace (monitoramento)"
-      ]
-    },
-    {
-      category: "DevOps e Infraestrutura",
-      icon: "server",
-      items: [
-        "AWS",
-        "Jira",
-        "Git & GitHub"
+        "Power Automate"
       ]
     },
     {
@@ -129,6 +112,15 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
         "Unity Engine (C#)",
         "Impressão 3D (Manufatura Aditiva)",
         "Montagem e Manutenção de Hardware"
+      ]
+    },
+    {
+      category: "Dados e BI",
+      icon: "server",
+      items: [
+        "Power BI (modelagem de dados, Power Query, dashboards e DAX)",
+        "Conceitos de ETL e modelagem analítica",
+        "SQL e bancos de dados NoSQL"
       ]
     },
     {
@@ -167,7 +159,7 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
     {
       title: "AudioJoiner",
       description: "Utilitário desktop de alta performance para Windows (< 40MB RAM) desenvolvido em C# / .NET 8 e WPF. Unifica e clona a saída de áudio do sistema em tempo real para múltiplos dispositivos de som físicos simultaneamente sem drivers virtuais externos.",
-      image: "assets/images/projects/project-audiojoiner.svg",
+      image: "assets/images/projects/audiojoiner.png",
       featured: false,
       status: "desenvolvendo",
       tags: ["Desenvolvendo", "C# / .NET 8", "WPF", "Windows", "Áudio"],
@@ -186,11 +178,11 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
     {
       title: "Projetos de Impressões 3D (L3D UFF)",
       description: "Projetos, peças técnicas e modelos desenvolvidos no Laboratório de Impressão 3D do Instituto de Física da Universidade Federal Fluminense. Contribuições realizadas até 2021.",
-      image: "assets/images/projects/project-3d.svg",
+      image: "assets/images/projects/l3d-prints.jpg",
       featured: false,
       status: "descontinuado",
       tags: ["Descontinuado", "Impressão 3D", "L3D UFF", "Manufatura Aditiva", "Hardware"],
-      demoUrl: "https://l3d.if.uff.br/?cat=4",
+      demoUrl: "",
       githubUrl: ""
     },
     {
@@ -200,15 +192,6 @@ Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
       featured: false,
       tags: ["Artigo Científico", "UFF", "Sistemas de Informação", "RIUFF"],
       demoUrl: "https://app.homologacao.uff.br/riuff/handle/1/22495",
-      githubUrl: ""
-    },
-    {
-      title: "Modo Stealth (Reviews & Tecnologia)",
-      description: "Portal e blog com análises aprofundadas, ensaios e artigos sobre o ecossistema de games, hardware e tecnologia.",
-      image: "assets/images/projects/project-stealth.svg",
-      featured: false,
-      tags: ["Blog", "Reviews", "Tecnologia", "WordPress"],
-      demoUrl: "https://modostealth.wordpress.com/",
       githubUrl: ""
     }
   ]

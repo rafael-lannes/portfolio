@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="steamerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#171a21" />
+      <stop offset="50%" stop-color="#1b2838" />
+      <stop offset="100%" stop-color="#2a475e" />
+    </linearGradient>
+    <linearGradient id="steamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#66c0f4" />
+      <stop offset="100%" stop-color="#1999e3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#steamerBg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="180" r="110" fill="#66c0f4" opacity="0.15" filter="blur(20px)" />
+
+  <!-- Steam-inspired Gear / Connecting Rod Symbol -->
+  <g transform="translate(400, 180)">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="url(#steamBlue)" stroke-width="4" />
+    <!-- Big Joint -->
+    <circle cx="28" cy="-28" r="28" fill="#1b2838" stroke="url(#steamBlue)" stroke-width="4" />
+    <circle cx="28" cy="-28" r="12" fill="url(#steamBlue)" />
+    <!-- Small Joint -->
+    <circle cx="-35" cy="35" r="18" fill="#1b2838" stroke="url(#steamBlue)" stroke-width="4" />
+    <circle cx="-35" cy="35" r="7" fill="url(#steamBlue)" />
+    <!-- Connecting Rod -->
+    <line x1="28" y1="-28" x2="-35" y2="35" stroke="url(#steamBlue)" stroke-width="12" stroke-linecap="round" />
+  </g>
+
+  <!-- Status / Title Badge -->
+  <rect x="250" y="315" width="300" height="46" rx="23" fill="#101822" stroke="#66c0f4" stroke-width="1.5" />
+  <text x="400" y="344" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="700" font-size="16" text-anchor="middle" letter-spacing="1">STEAMER (DESENVOLVENDO)</text>
+</svg>

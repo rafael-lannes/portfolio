@@ -3,24 +3,22 @@
     
     <div class="contact-card">
       <div class="contact-content">
-        <span class="contact-kicker">Contato & Conexão</span>
-        <h2 class="contact-title">Tem um projeto ou oportunidade em mente?</h2>
+        <h2 class="contact-title">Vamos conversar?</h2>
         <p class="contact-description">
-          Estou sempre aberto a novas parcerias, oportunidades profissionais e discussões sobre desenvolvimento de software, web ou jogos. Vamos conversar!
+          Sinta-se à vontade para conectar pelo LinkedIn ou conferir meus repositórios para bater um papo sobre tecnologia, projetos ou oportunidades.
         </p>
 
         <div class="contact-buttons-group">
-          {% if site.author.email %}
-          <a href="{{ site.social.email | default: 'mailto:' | append: site.author.email }}" class="btn btn-primary btn-lg">
-            {% include icons.html name="email" class="icon" %}
-            <span>Enviar um E-mail</span>
-          </a>
-          {% endif %}
-
           {% if site.social.linkedin %}
-          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
             {% include icons.html name="linkedin" class="icon" %}
             <span>Conectar no LinkedIn</span>
+          </a>
+          {% endif %}
+          {% if site.social.github %}
+          <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            {% include icons.html name="github" class="icon" %}
+            <span>Explorar GitHub</span>
           </a>
           {% endif %}
         </div>

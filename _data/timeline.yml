@@ -1,0 +1,27 @@
+# ==============================================================================
+# LINHA DO TEMPO DA CARREIRA - RAFAEL LANNES
+# ==============================================================================
+
+- year: "2015"
+  title: "Universidade Federal Fluminense (UFF)"
+  description: "Comecei a estudar Sistemas de Informação na UFF (Niterói - RJ)."
+
+- year: "2018"
+  title: "Estágio em Suporte Técnico - UFF"
+  description: "Iniciei meu estágio em Suporte Técnico e manutenção de computadores na Biblioteca da Física do Instituto de Física da UFF."
+
+- year: "2019"
+  title: "Técnico de TI e Impressão 3D - L3D UFF"
+  description: "Comecei a trabalhar como Técnico de TI e Impressão 3D no projeto de extensão e inovação L3D UFF."
+
+- year: "2020"
+  title: "Graduação em Sistemas de Informação"
+  description: "Me formei em Sistemas de Informação pela UFF e continuei atuando com manufatura aditiva no laboratório L3D."
+
+- year: "2021 - Presente"
+  title: "Analista de Soluções Digitais - Enel"
+  description: "Iniciei minha carreira corporativa como Analista Júnior de Soluções Digitais na Enel, desenvolvendo soluções e melhorias tecnológicas."
+
+- year: "Atualmente"
+  title: "Aprendizado Contínuo & Desenvolvimento"
+  description: "Atualmente focado em aprimorar minhas competências, explorar novas tecnologias e me desenvolver constantemente — uma paixão por aprender que nunca muda."

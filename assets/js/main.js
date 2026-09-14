@@ -3,6 +3,7 @@
  * 🚀 SCRIPT PRINCIPAL - PORTFÓLIO RAFAEL LANNES
  * ==============================================================================
  * - Renderização e Hidratação de Dados via SITE_CONFIG (config.js)
+ * - Linha do tempo da carreira (Timeline)
  * - Alternância de Tema Dark / Light Mode com persistência (localStorage)
  * - Menu Hamburguer Mobile Acessível (com ARIA e bloqueio de scroll de fundo)
  * - Destaque de Link Ativo no Menu conforme a rolagem (ScrollSpy)
@@ -22,7 +23,9 @@ const SVG_ICONS = {
   layout: `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>`,
   gamepad: `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect width="20" height="12" x="2" y="6" rx="6"></rect></svg>`,
   server: `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
-  star: `<svg class="icon badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`
+  star: `<svg class="icon badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
+  briefcase: `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+  fileText: `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>`
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
  * 1. RENDERIZAÇÃO DINÂMICA DO CONTEÚDO A PARTIR DO CONFIG.JS
  */
 function renderSiteContent(config) {
-  const { profile, social, skills, projects } = config;
+  const { profile, social, skills, projects, timeline, navigation } = config;
+
+  // Atualizar Navegação
+  if (navigation && Array.isArray(navigation)) {
+    renderNavigation(navigation);
+  }
 
   // Atualizar Perfil & Textos Básicos
   if (profile) {
@@ -59,8 +67,11 @@ function renderSiteContent(config) {
     if (profile.role) {
       const heroRoleElem = document.getElementById('hero-role');
       if (heroRoleElem) heroRoleElem.textContent = profile.role;
-      const aboutFocusElem = document.getElementById('about-focus');
-      if (aboutFocusElem) aboutFocusElem.textContent = profile.role;
+    }
+
+    if (profile.institution) {
+      const heroInstElem = document.getElementById('hero-institution');
+      if (heroInstElem) heroInstElem.textContent = profile.institution;
     }
 
     if (profile.location) {
@@ -95,7 +106,7 @@ function renderSiteContent(config) {
       if (statusContainer && statusText) {
         if (profile.status.available) {
           statusContainer.style.display = 'inline-flex';
-          statusText.textContent = profile.status.text || 'Disponível para novos projetos';
+          statusText.textContent = profile.status.text || 'Aprendendo algo novo todos os dias!';
         } else {
           statusContainer.style.display = 'none';
         }
@@ -105,6 +116,11 @@ function renderSiteContent(config) {
     if (profile.email) {
       const emailBtn = document.getElementById('contact-email-btn');
       if (emailBtn) emailBtn.href = `mailto:${profile.email}`;
+    }
+
+    if (profile.cvUrl) {
+      const heroCvBtn = document.getElementById('hero-cv-btn');
+      if (heroCvBtn) heroCvBtn.href = profile.cvUrl;
     }
   }
 
@@ -127,9 +143,48 @@ function renderSiteContent(config) {
     renderSkills(skills);
   }
 
-  // Renderizar Projetos
+  // Renderizar Linha do Tempo (Timeline)
+  if (timeline && Array.isArray(timeline)) {
+    renderTimeline(timeline);
+  }
+
+  // Renderizar Projetos ("Coisas que fiz!")
   if (projects && Array.isArray(projects)) {
     renderProjects(projects);
+  }
+}
+
+/**
+ * Renderiza Links de Navegação Desktop e Mobile
+ */
+function renderNavigation(navigation) {
+  const desktopNavList = document.getElementById('desktop-nav-list');
+  const mobileNavList = document.getElementById('mobile-nav-list');
+
+  if (desktopNavList) {
+    desktopNavList.innerHTML = navigation.map(item => `
+      <li class="nav-item">
+        <a href="${item.url}" 
+           class="nav-link ${item.url === '#hero' ? 'active' : ''}" 
+           ${item.external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+          ${item.title}
+          ${item.external ? SVG_ICONS.external : ''}
+        </a>
+      </li>
+    `).join('');
+  }
+
+  if (mobileNavList) {
+    mobileNavList.innerHTML = navigation.map(item => `
+      <li class="mobile-nav-item">
+        <a href="${item.url}" 
+           class="mobile-nav-link" 
+           ${item.external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+          ${item.title}
+          ${item.external ? SVG_ICONS.external : ''}
+        </a>
+      </li>
+    `).join('');
   }
 }
 
@@ -142,16 +197,16 @@ function renderSocialLinks(social) {
   const mobileContainer = document.getElementById('mobile-social-container');
 
   const socialItems = [
-    { key: 'github', label: 'GitHub', url: social.github, icon: SVG_ICONS.github },
     { key: 'linkedin', label: 'LinkedIn', url: social.linkedin, icon: SVG_ICONS.linkedin },
     { key: 'itchio', label: 'Itch.io', url: social.itchio, icon: SVG_ICONS.itchio },
-    { key: 'twitter', label: 'Twitter', url: social.twitter, icon: SVG_ICONS.twitter },
-    { key: 'email', label: 'E-mail', url: social.email, icon: SVG_ICONS.email }
+    { key: 'github', label: 'GitHub', url: social.github, icon: SVG_ICONS.github },
+    { key: 'reviews', label: 'Reviews (Modo Stealth)', url: social.reviews, icon: SVG_ICONS.layout },
+    { key: 'l3d', label: 'L3D UFF', url: social.l3d, icon: SVG_ICONS.external }
   ].filter(item => item.url && item.url.trim() !== '');
 
   if (heroContainer) {
     heroContainer.innerHTML = socialItems.map(item => `
-      <a href="${item.url}" ${item.key !== 'email' ? 'target="_blank" rel="noopener noreferrer"' : ''} class="social-icon-pill" aria-label="${item.label}">
+      <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="social-icon-pill" aria-label="${item.label}">
         ${item.icon}
         <span>${item.label}</span>
       </a>
@@ -160,7 +215,7 @@ function renderSocialLinks(social) {
 
   if (footerContainer) {
     footerContainer.innerHTML = socialItems.map(item => `
-      <a href="${item.url}" ${item.key !== 'email' ? 'target="_blank" rel="noopener noreferrer"' : ''} class="footer-social-icon" aria-label="${item.label}">
+      <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="${item.label}" title="${item.label}">
         ${item.icon}
       </a>
     `).join('');
@@ -168,11 +223,30 @@ function renderSocialLinks(social) {
 
   if (mobileContainer) {
     mobileContainer.innerHTML = socialItems.map(item => `
-      <a href="${item.url}" ${item.key !== 'email' ? 'target="_blank" rel="noopener noreferrer"' : ''} class="social-btn" aria-label="${item.label}">
+      <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="${item.label}" title="${item.label}">
         ${item.icon}
       </a>
     `).join('');
   }
+}
+
+/**
+ * Renderiza a Linha do Tempo da Carreira
+ */
+function renderTimeline(timeline) {
+  const container = document.getElementById('timeline-container');
+  if (!container) return;
+
+  container.innerHTML = timeline.map(item => `
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <span class="timeline-year-badge">${item.year}</span>
+        <h4 class="timeline-role-title">${item.title}</h4>
+        <p class="timeline-desc">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
 }
 
 /**
@@ -184,12 +258,14 @@ function renderSkills(skills) {
 
   container.innerHTML = skills.map(group => {
     const groupIcon = SVG_ICONS[group.icon] || SVG_ICONS.layout;
-    const tagsHtml = group.items.map(item => `
-      <li class="skill-tag">
-        <span class="skill-tag-name">${item.name}</span>
-        ${item.level ? `<span class="skill-tag-badge">${item.level}</span>` : ''}
-      </li>
-    `).join('');
+    const tagsHtml = group.items.map(item => {
+      const name = typeof item === 'string' ? item : item.name;
+      return `
+        <li class="skill-tag">
+          <span class="skill-tag-name">${name}</span>
+        </li>
+      `;
+    }).join('');
 
     return `
       <div class="skill-category-card">
@@ -206,7 +282,7 @@ function renderSkills(skills) {
 }
 
 /**
- * Renderiza os Cards de Projetos
+ * Renderiza os Cards de Projetos ("Coisas que fiz!")
  */
 function renderProjects(projects) {
   const container = document.getElementById('projects-container');
@@ -214,35 +290,42 @@ function renderProjects(projects) {
 
   container.innerHTML = projects.map(proj => {
     const featuredClass = proj.featured ? 'is-featured' : '';
-    const featuredBadge = proj.featured 
-      ? `<span class="project-badge-featured">${SVG_ICONS.star} Destaque</span>` 
-      : '';
+    let badgeHtml = '';
+    if (proj.status === 'desenvolvendo') {
+      badgeHtml = `<span class="project-badge-dev">🔨 Desenvolvendo</span>`;
+    } else if (proj.status === 'descontinuado') {
+      badgeHtml = `<span class="project-badge-discontinued">Descontinuado</span>`;
+    } else if (proj.featured) {
+      badgeHtml = `<span class="project-badge-featured">${SVG_ICONS.star} Destaque</span>`;
+    }
 
     const tagsHtml = proj.tags ? proj.tags.map(t => `<span class="tag-pill">${t}</span>`).join('') : '';
 
     const demoBtn = proj.demoUrl && proj.demoUrl.trim() !== ''
       ? `<a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-          <span>Ver Demo</span>
+          <span>Acessar Projeto</span>
           ${SVG_ICONS.external}
         </a>`
       : '';
 
     const githubBtn = proj.githubUrl && proj.githubUrl.trim() !== ''
       ? `<a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
-          <span>Código</span>
+          <span>GitHub</span>
           ${SVG_ICONS.github}
         </a>`
       : '';
+
+    const formattedDescription = (proj.description || '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
     return `
       <article class="project-card ${featuredClass}">
         <div class="project-media-wrapper">
           <img src="${proj.image}" alt="Thumbnail de ${proj.title}" class="project-thumbnail" loading="lazy" width="400" height="240">
-          ${featuredBadge}
+          ${badgeHtml}
         </div>
         <div class="project-content">
           <h3 class="project-title">${proj.title}</h3>
-          <p class="project-description">${proj.description}</p>
+          <p class="project-description">${formattedDescription}</p>
           <div class="project-tags">${tagsHtml}</div>
           <div class="project-actions">
             ${demoBtn}
@@ -310,8 +393,10 @@ function initMobileMenu() {
     }
   });
 
-  mobileNav.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => closeMenu());
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target.classList.contains('mobile-nav-link') || e.target.closest('.mobile-nav-link')) {
+      closeMenu();
+    }
   });
 
   document.addEventListener('keydown', (e) => {
@@ -349,7 +434,7 @@ function initScrollSpy() {
           const href = link.getAttribute('href');
           if (href === `#${id}` || href.endsWith(`#${id}`)) {
             link.classList.add('active');
-          } else {
+          } else if (!href.startsWith('http')) {
             link.classList.remove('active');
           }
         });

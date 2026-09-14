@@ -3,21 +3,9 @@
     
     <!-- Redes Sociais no Rodapé -->
     <div class="footer-social-links" aria-label="Redes sociais do rodapé">
-      {% if site.social.github %}
-      <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
-        {% include icons.html name="github" class="icon" %}
-      </a>
-      {% endif %}
-
       {% if site.social.linkedin %}
       <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
         {% include icons.html name="linkedin" class="icon" %}
-      </a>
-      {% endif %}
-
-      {% if site.social.twitter %}
-      <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Twitter / X">
-        {% include icons.html name="twitter" class="icon" %}
       </a>
       {% endif %}
 
@@ -27,9 +15,9 @@
       </a>
       {% endif %}
 
-      {% if site.social.email %}
-      <a href="{{ site.social.email }}" class="footer-social-icon" aria-label="E-mail">
-        {% include icons.html name="email" class="icon" %}
+      {% if site.social.github %}
+      <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+        {% include icons.html name="github" class="icon" %}
       </a>
       {% endif %}
     </div>
@@ -40,7 +28,7 @@
         &copy; <span id="copyright-year">{{ 'now' | date: "%Y" }}</span> {{ site.author.name }}. Todos os direitos reservados.
       </p>
       <p class="footer-credits">
-        Construído com <span class="heart-symbol">♥</span> e otimizado para o <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+        Universidade Federal Fluminense (UFF) &bull; Otimizado para o <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
       </p>
     </div>
 

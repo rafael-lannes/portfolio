@@ -1,58 +1,95 @@
 # ==============================================================================
-# LISTA DE PROJETOS DO PORTFÓLIO
-# ==============================================================================
-# Para adicionar um novo projeto, basta copiar um bloco abaixo e preencher
-# os campos. A página criará o card e os botões automaticamente!
+# PROJETOS (PORTFOLIO) - RAFAEL LANNES
 # ==============================================================================
 
-- title: "Chronicles of Aethelgard"
-  description: "RPG de ação tático desenvolvido em Unity/C# com sistema de combate dinâmico, geração procedural de masmorras e shaders customizados."
-  image: "assets/images/projects/project-1.svg"
-  featured: true
+- title: "SteamER"
+  description: "Aplicação web moderna, rápida e responsiva criada para facilitar a elaboração, formatação padronizada e publicação de análises (reviews) de jogos na Steam."
+  image: "assets/images/projects/steamer.jpg"
+  featured: false
+  status: "desenvolvendo"
   tags:
+    - "Desenvolvendo"
+    - "Web App"
+    - "Steam Reviews"
+    - "Produtividade"
+  demo_url: "https://rafael-lannes.github.io/SteamER/"
+  github_url: "https://github.com/rafael-lannes/SteamER"
+
+- title: "Cloudpaper"
+  description: "Aplicativo Android moderno para gerenciamento de papéis de parede em nuvem, personalização de interface e integração com serviços de mídia."
+  image: "assets/images/projects/cloudpaper.jpg"
+  featured: false
+  status: "desenvolvendo"
+  tags:
+    - "Desenvolvendo"
+    - "Android"
+    - "Mobile"
+    - "Kotlin / Java"
+    - "Cloud"
+  demo_url: ""
+  github_url: "https://github.com/rafael-lannes/Cloudpaper"
+
+- title: "AudioJoiner"
+  description: "Utilitário desktop de alta performance para Windows (< 40MB RAM) desenvolvido em C# / .NET 8 e WPF. Unifica e clona a saída de áudio do sistema em tempo real para múltiplos dispositivos de som físicos simultaneamente sem drivers virtuais externos."
+  image: "assets/images/projects/project-audiojoiner.svg"
+  featured: false
+  status: "desenvolvendo"
+  tags:
+    - "Desenvolvendo"
+    - "C# / .NET 8"
+    - "WPF"
+    - "Windows"
+    - "Áudio"
+  demo_url: ""
+  github_url: "https://github.com/rafael-lannes/AudioJoiner"
+
+- title: "Protótipos & Jogos Digitais (Itch.io)"
+  description: "Jogos e protótipos interativos desenvolvidos em Unity e C#, publicados de forma independente no Itch.io com foco em mecânicas responsivas e design de jogabilidade."
+  image: "assets/images/projects/project-game.svg"
+  featured: false
+  tags:
+    - "Game Dev"
+    - "Itch.io"
     - "Unity"
     - "C#"
-    - "Shaders/HLSL"
     - "Game Design"
-  demo_url: "https://itch.io"
-  github_url: "https://github.com/rafaellannes"
-  details_url: ""
+  demo_url: "https://rafaellannes.itch.io/"
+  github_url: "https://github.com/rafael-lannes"
 
-- title: "DevFlow SaaS Platform"
-  description: "Plataforma completa de gerenciamento de sprints e métricas de engenharia com sincronização em tempo real via WebSockets e dashboard analítico."
-  image: "assets/images/projects/project-2.svg"
-  featured: true
+- title: "Projetos de Impressões 3D (L3D UFF)"
+  description: "Projetos, peças técnicas e modelos desenvolvidos no Laboratório de Impressão 3D do Instituto de Física da Universidade Federal Fluminense. Contribuições realizadas até 2021."
+  image: "assets/images/projects/project-3d.svg"
+  featured: false
+  status: "descontinuado"
   tags:
-    - "TypeScript"
-    - "React"
-    - "Node.js"
-    - "PostgreSQL"
-  demo_url: "https://github.com/rafaellannes"
-  github_url: "https://github.com/rafaellannes"
-  details_url: ""
+    - "Descontinuado"
+    - "Impressão 3D"
+    - "L3D UFF"
+    - "Manufatura Aditiva"
+    - "Hardware"
+  demo_url: "https://l3d.if.uff.br/?cat=4"
+  github_url: ""
 
-- title: "Retro Pixel Engine"
-  description: "Motor de jogos 2D leve escrito em C++ e WebAssembly com renderizador customizado, suporte a partículas e reprodução de áudio chiptune."
-  image: "assets/images/projects/project-3.svg"
+- title: "Trabalho de Conclusão de Curso (TCC UFF)"
+  description: "Artigo científico e Trabalho de Conclusão de Curso em Sistemas de Informação disponibilizado no Repositório Institucional da UFF (RIUFF)."
+  image: "assets/images/projects/project-tcc.svg"
   featured: false
   tags:
-    - "C++"
-    - "WebAssembly"
-    - "OpenGL / WebGL"
-    - "Audio DSP"
-  demo_url: ""
-  github_url: "https://github.com/rafaellannes"
-  details_url: ""
+    - "Artigo Científico"
+    - "UFF"
+    - "Sistemas de Informação"
+    - "RIUFF"
+  demo_url: "https://app.homologacao.uff.br/riuff/handle/1/22495"
+  github_url: ""
 
-- title: "Neural Terrain Generator"
-  description: "Ferramenta procedural para geração de mapas e biomas 3D baseada em ruído quádruplo e redes neurais leves para exportação em formatos de engine."
-  image: "assets/images/projects/project-1.svg"
+- title: "Modo Stealth (Reviews & Tecnologia)"
+  description: "Portal e blog com análises aprofundadas, ensaios e artigos sobre o ecossistema de games, hardware e tecnologia."
+  image: "assets/images/projects/project-stealth.svg"
   featured: false
   tags:
-    - "Python"
-    - "Compute Shaders"
-    - "GLTF"
-    - "Tools Dev"
-  demo_url: ""
-  github_url: "https://github.com/rafaellannes"
-  details_url: ""
+    - "Blog"
+    - "Reviews"
+    - "Tecnologia"
+    - "WordPress"
+  demo_url: "https://modostealth.wordpress.com/"
+  github_url: ""

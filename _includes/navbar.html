@@ -2,19 +2,22 @@
   <div class="container header-container">
     <!-- Brand / Logo -->
     <a href="{{ '/' | relative_url }}" class="brand-logo" aria-label="Voltar ao início">
-      <span class="logo-symbol">&lt;/&gt;</span>
+      <span class="logo-symbol">RL</span>
       <span class="logo-text">{{ site.author.name }}</span>
     </a>
 
     <!-- Desktop Nav Links -->
     <nav class="desktop-nav" aria-label="Navegação principal">
-      <ul class="nav-list">
+      <ul class="nav-list" id="desktop-nav-list">
         {% for item in site.navigation %}
         <li class="nav-item">
-          <a href="{{ item.url | relative_url }}" 
+          <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" 
              class="nav-link" 
              {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
             {{ item.title }}
+            {% if item.external %}
+            {% include icons.html name="external-link" class="icon" %}
+            {% endif %}
           </a>
         </li>
         {% endfor %}
@@ -48,32 +51,33 @@
   <!-- Mobile Drawer / Dropdown -->
   <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação mobile" hidden>
     <div class="container mobile-nav-container">
-      <ul class="mobile-nav-list">
+      <ul class="mobile-nav-list" id="mobile-nav-list">
         {% for item in site.navigation %}
         <li class="mobile-nav-item">
-          <a href="{{ item.url | relative_url }}" 
+          <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}" 
              class="mobile-nav-link" 
              {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
             {{ item.title }}
+            {% if item.external %} ↗{% endif %}
           </a>
         </li>
         {% endfor %}
       </ul>
 
-      <div class="mobile-social-links">
-        {% if site.social.github %}
-        <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-          {% include icons.html name="github" class="icon" %}
-        </a>
-        {% endif %}
+      <div class="mobile-social-links" id="mobile-social-container">
         {% if site.social.linkedin %}
         <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
           {% include icons.html name="linkedin" class="icon" %}
         </a>
         {% endif %}
-        {% if site.social.email %}
-        <a href="{{ site.social.email }}" class="social-btn" aria-label="E-mail">
-          {% include icons.html name="email" class="icon" %}
+        {% if site.social.itchio %}
+        <a href="{{ site.social.itchio }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Itch.io">
+          {% include icons.html name="itchio" class="icon" %}
+        </a>
+        {% endif %}
+        {% if site.social.github %}
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+          {% include icons.html name="github" class="icon" %}
         </a>
         {% endif %}
       </div>

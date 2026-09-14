@@ -2,8 +2,8 @@
   <div class="container">
     
     <div class="section-header">
-      <h2 class="section-title">Portfólio de Projetos</h2>
-      <p class="section-subtitle">Aplicações web, jogos e ferramentas desenvolvidas recentemente</p>
+      <h2 class="section-title">Portfolio de Projetos</h2>
+      <p class="section-subtitle">Aplicações web, utilitários de sistema, jogos e manufatura aditiva</p>
     </div>
 
     <!-- Grid de Cards de Projetos -->
@@ -11,7 +11,7 @@
       {% for project in site.data.projects %}
       <article class="project-card {% if project.featured %}is-featured{% endif %}">
         
-        <!-- Thumbnail com Badge de Destaque -->
+        <!-- Thumbnail com Badge de Destaque / Status -->
         <div class="project-media-wrapper">
           <img src="{{ project.image | relative_url }}" 
                alt="Thumbnail do projeto {{ project.title }}" 
@@ -20,7 +20,15 @@
                width="400"
                height="240">
           
-          {% if project.featured %}
+          {% if project.status == "desenvolvendo" %}
+          <span class="project-badge-dev">
+            🔨 Desenvolvendo
+          </span>
+          {% elsif project.status == "descontinuado" %}
+          <span class="project-badge-discontinued">
+            Descontinuado
+          </span>
+          {% elsif project.featured %}
           <span class="project-badge-featured">
             {% include icons.html name="sun" class="icon badge-icon" %} Destaque
           </span>
@@ -49,8 +57,8 @@
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn btn-sm btn-primary" 
-               aria-label="Ver demonstração ao vivo de {{ project.title }}">
-              <span>Ver Demo</span>
+               aria-label="Acessar projeto {{ project.title }}">
+              <span>Acessar Projeto</span>
               {% include icons.html name="external-link" class="icon" %}
             </a>
             {% endif %}
@@ -61,16 +69,8 @@
                rel="noopener noreferrer" 
                class="btn btn-sm btn-secondary" 
                aria-label="Ver código-fonte no GitHub de {{ project.title }}">
-              <span>Código</span>
+              <span>GitHub</span>
               {% include icons.html name="github" class="icon" %}
-            </a>
-            {% endif %}
-
-            {% if project.details_url and project.details_url != "" %}
-            <a href="{{ project.details_url | relative_url }}" 
-               class="btn btn-sm btn-outline" 
-               aria-label="Mais detalhes sobre {{ project.title }}">
-              <span>Detalhes</span>
             </a>
             {% endif %}
           </div>
@@ -79,17 +79,6 @@
       </article>
       {% endfor %}
     </div>
-
-    <!-- Chamada para ver mais no GitHub -->
-    {% if site.social.github %}
-    <div class="projects-footer-cta">
-      <p>Quer explorar mais repositórios e protótipos de código?</p>
-      <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-        {% include icons.html name="github" class="icon" %}
-        <span>Ver todos no GitHub</span>
-      </a>
-    </div>
-    {% endif %}
 
   </div>
 </section>

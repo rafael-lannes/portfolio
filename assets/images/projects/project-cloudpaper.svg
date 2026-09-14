@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="androidBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="androidGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3ddc84" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#androidBg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="180" r="120" fill="#3ddc84" opacity="0.15" filter="blur(25px)" />
+
+  <!-- Phone Frame & Cloud Wallpaper Illustration -->
+  <g transform="translate(400, 175)">
+    <!-- Smartphone Outline -->
+    <rect x="-70" y="-105" width="140" height="210" rx="18" fill="#0f172a" stroke="url(#androidGreen)" stroke-width="3" />
+    
+    <!-- Phone Screen area -->
+    <rect x="-62" y="-85" width="124" height="175" rx="8" fill="#06121e" />
+    
+    <!-- Camera notch / pill -->
+    <circle cx="0" cy="-95" r="4" fill="#3ddc84" />
+    
+    <!-- Cloud Graphic on Screen -->
+    <g transform="translate(0, -10)">
+      <!-- Cloud -->
+      <path d="M-30 10 A16 16 0 0 1 -10 -8 A24 24 0 0 1 20 -4 A16 16 0 0 1 30 10 A12 12 0 0 1 24 22 L -22 22 A14 14 0 0 1 -30 10 Z" fill="url(#cloudGrad)" opacity="0.9" />
+      <!-- Wallpaper Sun / Horizon -->
+      <circle cx="12" cy="-14" r="7" fill="#f59e0b" />
+      <!-- Mountain wallpaper layers below -->
+      <polygon points="-55,45 -15,10 15,45" fill="#1e293b" />
+      <polygon points="-10,45 20,20 55,45" fill="#334155" />
+    </g>
+
+    <!-- Android Badge Icon floating -->
+    <circle cx="55" cy="55" r="20" fill="#0f172a" stroke="#3ddc84" stroke-width="2" />
+    <!-- Android Robot Head -->
+    <path d="M47 52 A8 8 0 0 1 63 52 Z" fill="#3ddc84" />
+    <circle cx="51" cy="49" r="1" fill="#0f172a" />
+    <circle cx="59" cy="49" r="1" fill="#0f172a" />
+    <line x1="49" y1="44" x2="48" y2="42" stroke="#3ddc84" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="61" y1="44" x2="62" y2="42" stroke="#3ddc84" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="240" y="315" width="320" height="46" rx="23" fill="#0f172a" stroke="#3ddc84" stroke-width="1.5" />
+  <text x="400" y="344" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="700" font-size="16" text-anchor="middle" letter-spacing="1">CLOUDPAPER (DESENVOLVENDO)</text>
+</svg>

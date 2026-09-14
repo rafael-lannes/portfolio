@@ -1,80 +1,64 @@
 # ==============================================================================
 # CONFIGURAÇÃO PRINCIPAL DO PORTFÓLIO - RAFAEL LANNES
 # ==============================================================================
-# Todas as informações do seu site são configuradas aqui de forma simples.
-# Não é necessário alterar arquivos HTML para atualizar seus dados pessoais!
-# ==============================================================================
 
 # Informações Básicas do Site
-title: "Rafael Lannes | Desenvolvedor & Portfólio"
-description: "Portfólio profissional de Rafael Lannes. Projetos em desenvolvimento web, engenharia de software e game dev."
-url: "" # Se tiver domínio personalizado (ex: https://rafaellannes.com), insira aqui. Caso contrário, deixe vazio.
-baseurl: "" # Se o site for 'usuario.github.io/meu-portfolio', coloque '/meu-portfolio'. Se for 'usuario.github.io', deixe vazio "".
+title: "Rafael Lannes | Bacharel em Sistemas de Informação - UFF"
+description: "Bacharel em Sistemas de Informação - Universidade Federal Fluminense - Aprendendo algo novo todos os dias!"
+url: "https://rafael-lannes.github.io"
+baseurl: ""
 
 # Metadados do Autor (Exibidos no Hero, Sobre e SEO)
 author:
   name: "Rafael Lannes"
-  role: "Desenvolvedor Full-Stack & Game Dev"
-  location: "Brasil"
-  email: "contato@rafaellannes.dev"
+  role: "Analista de Soluções Digitais & Engenheiro de Software"
+  institution: "Bacharel em Sistemas de Informação — Universidade Federal Fluminense (UFF)"
+  subheading: "Soluções digitais, engenharia de software e análise de dados"
+  location: "Niterói, RJ - Brasil"
+  email: ""
+  cv_url: "https://docs.google.com/document/d/1FzDuEu7fBet1tpHOFAoU4kjU7POQWh7B/edit?usp=sharing&ouid=111306556304286270366&rtpof=true&sd=true"
+  
   status:
-    available: true # Define se a badge de "Disponível para projetos" ficará verde e ativa
-    text: "Disponível para novos projetos e oportunidades"
+    available: true
+    text: "Explorando novas tecnologias e soluções"
   
-  # Foto de perfil / Avatar (Coloque sua imagem em assets/images/ e altere o nome aqui)
-  avatar: "assets/images/avatar.svg"
+  avatar: "assets/images/profile-pic.png"
   
-  # Resumo curto (Exibido com destaque no Hero)
-  bio_short: "Criando experiências digitais memoráveis, aplicações web escaláveis e mecânicas imersivas. Focado em código limpo, performance e usabilidade."
+  bio_short: "Formado em Sistemas de Informação pela UFF com atuação corporativa em Soluções Digitais na Enel. Desenvolvimento de software, modelagem de dados/BI e prototipagem técnica."
   
-  # Biografia completa (Exibida na seção 'Sobre')
   bio_full: >
-    Olá! Sou desenvolvedor apaixonado por tecnologia, desenvolvimento de software e criação de jogos.
-    Com experiência em construir produtos modernos do design ao deploy, gosto de transformar problemas
-    complexos em soluções digitais elegantes, acessíveis e eficientes.
+    Sou formado em Sistemas de Informação pela Universidade Federal Fluminense (UFF - Niterói) e atuo como Analista de Soluções Digitais na Enel.
+    Minha trajetória une desenvolvimento de software, engenharia de dados/BI e hardware. Possuo experiência no desenvolvimento de utilitários de alta performance em C# / .NET, automações com Python, dashboards em Power BI e prototipagem com manufatura aditiva (impressão 3D) no laboratório universitário L3D UFF.
+    Busco construir soluções tecnológicas robustas, eficientes e de real impacto.
 
 # Links de Redes Sociais e Contato
-# (Deixe o link vazio "" ou comente com # para ocultar da página)
 social:
-  github: "https://github.com/rafaellannes"
   linkedin: "https://linkedin.com/in/rafaellannes"
-  email: "mailto:contato@rafaellannes.dev"
-  twitter: "https://twitter.com/rafaellannes"
-  instagram: ""
-  youtube: ""
-  itchio: "" # Para Game Devs! (ex: https://rafaellannes.itch.io)
+  itchio: "https://rafaellannes.itch.io/"
+  github: "https://github.com/rafael-lannes"
+  reviews: "https://modostealth.wordpress.com/"
+  l3d: "https://l3d.if.uff.br/"
 
 # Links do Menu de Navegação
 navigation:
   - title: "Início"
     url: "#hero"
-  - title: "Sobre"
+  - title: "Sobre & Carreira"
     url: "#about"
-  - title: "Projetos"
+  - title: "Portfolio"
     url: "#projects"
+  - title: "Resume | CV"
+    url: "https://docs.google.com/document/d/1FzDuEu7fBet1tpHOFAoU4kjU7POQWh7B/edit?usp=sharing&ouid=111306556304286270366&rtpof=true&sd=true"
+    external: true
   - title: "Contato"
     url: "#contact"
-  # Exemplo de link externo ou currículo:
-  # - title: "Currículo (PDF)"
-  #   url: "assets/curriculo.pdf"
-  #   external: true
 
-# Configurações do Tema e Recursos
+# Configurações do Tema
 theme_settings:
-  default_theme: "dark" # "dark" ou "light" (o usuário pode alternar e a escolha é salva)
-  accent_color: "#6366f1" # Cor de destaque (Indigo moderno)
-  accent_gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)"
+  default_theme: "dark"
   show_theme_toggle: true
-  projects_per_page: 6
 
-# Configurações do Motor Jekyll (GitHub Pages)
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-exclude:
-  - README.md
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
